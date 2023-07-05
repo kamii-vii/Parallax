@@ -78,6 +78,10 @@ body {
     transform: translateZ(300px) scale(0.8);
 }
 
+.layer-7 {
+    transform: translateZ(350px) scale(0.8);
+}
+
 .hero-content {
     font-size: calc(var(--index) * 2.8);
     text-align: center;
@@ -101,7 +105,7 @@ body {
     border-radius: 10px;
     text-transform: uppercase;
     font-size: calc(var(--index)*.9);
-    width: calc(var(--index)*8);
+    width: calc(var(--index)*12);
     padding: calc(var(--index)*.4) calc(var(--index)*.4);
     background-color: rgb(0, 0, 0, 0.5);
     font-weight: bold;
@@ -110,6 +114,6 @@ body {
     border: rgb(255, 255, 255, 0.6) 3px solid;
 }
 
-.layer-4, .layer-5, .layer-6 {
+.layer-4, .layer-5, .layer-6, .layer-7 {
     pointer-events: none;
 }
