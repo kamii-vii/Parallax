@@ -6,28 +6,32 @@
     <title>Parallaxx</title>
     <link rel="stylesheet"  href="../style/styles.css">
     <script src="../scripts/App.js" defer></script>
+    <script src="../scripts/rain.js"defer></script>
 </head>
 <body>
 
-    <div class="logo"style="background-image: url(img/logo.png);"></div>
+    <div class="logo"">
+        <img src="../img/logo.png" alt="logo" class="logo">
+    </div>
+
+
     <section class="layers">
         <div class="layers__container">
-            <div class="layers__item layer-1" style="background-image: url(img/bg.png);"></div>
-            <div class="layers__item layer-2" style="background-image: url(img/green.png);"></div>
+            <div class="layers__item layer-1" style="background-image: url(../img/bg.png);"></div>
+            <div class="layers__item layer-2" style="background-image: url(../img/green.png);"></div>
             <div class="layers__item layer-3">
                 <div class="hero-content">
                     <h1>REGARDLESS FOREST</h1>
                     <div class="hero-content__p">Adorable and unbelivable</div>
                     <button class="start">Start your journey</button>
                 </div>
+            </div>
             <div class="layers__item layer-4">
                 <canvas class="rain"></canvas>
             </div>
-            <div class="layers__item layer-5" style="background-image: url(img/tree.png);"></div>
-            <div class="layers__item layer-6" style="background-image: url(img/leaves.png);"></div>
+            <div class="layers__item layer-5" style="background-image: url(../img/tree.png);"></div>
+            <div class="layers__item layer-6" style="background-image: url(../img/leaves.png);"></div>
         </div>
     </section>
-
-    <div style="height: 100vh;"></div>
 </body>
 </html>

@@ -5,7 +5,8 @@ box-sizing: border-box;
 }
 
 :root {
-
+    --index: calc(1vw + 1vh);
+    --transition: 2s cubic-bezier(.05, .5, 0, 1)  
 }
 
 body {
@@ -14,7 +15,101 @@ body {
 }
 
 .logo {
-    width: 150px;
-    height: 150px;
-    background-repeat: no-repeat;
+    width: calc(var(--index)*8);
+    height: calc(var(--index)*8);
+    position: absolute;
+    left: calc(var(--index) * .1);
+    top: calc(var(--index) * -.9);
+    z-index: 1;
+}
+
+.logo img {
+    width: calc(var(--index)*8);
+    height: calc(var(--index)*8);
+}
+
+.layers {
+    perspective: 1000px;
+    overflow: hidden;
+}
+
+.layers__container {
+    height: 100vh;
+    min-height: 500px;
+    transform-style: preserve-3d;
+    transform: rotateX(var(--move-y)) rotateY(var(--move-x));
+    will-change: transform;
+    transition: transform var(--transition);
+}
+
+.layers__item {
+    position: absolute;
+    inset: -5vw;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.layer-1 {
+    transform: translateZ(-50px) scale(1.06);
+}
+
+ .layer-2 {
+    transform: translateZ(30px) translateY(50px) scale(1.1);
+}
+
+ .layer-3 {
+    transform: translateZ(60px) scale(0.85);
+} 
+
+ .layer-4 {
+    transform: translateZ(80px) scale(0.85);
+}
+
+.layer-5 {
+    transform: translateZ(200px) scale(0.85);
+    right: 10%;
+}
+
+.layer-6 {
+    transform: translateZ(300px) scale(0.8);
+}
+
+.hero-content {
+    font-size: calc(var(--index) * 2.8);
+    text-align: center;
+    margin-top: calc(var(--index) * 5);
+
+
+}
+
+.hero-content span {
+    display: block;
+}
+
+.hero-content__p {
+    text-transform: none;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: calc(var(--index) * 1.8);
+}
+
+.start {
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-size: calc(var(--index)*.9);
+    width: calc(var(--index)*8);
+    padding: calc(var(--index)*.4) calc(var(--index)*.4);
+    background-color: rgb(0, 0, 0, 0.5);
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    border: rgb(255, 255, 255, 0.6) 3px solid;
+}
+
+.layer-4, .layer-5, .layer-6 {
+    pointer-events: none;
 }
