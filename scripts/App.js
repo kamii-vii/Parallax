@@ -7,3 +7,20 @@ document.addEventListener('mousemove', e =>{
         `
 })
 })
+
+window.addEventListener('devicemotion', function(event) {
+    var accelerationX = event.accelerationIncludingGravity.x;
+    var accelerationY = event.accelerationIncludingGravity.y;
+  
+    // Виклик функції для зміни об'єкту на основі прискорення
+    transformObject(accelerationX, accelerationY);
+  });
+  
+  // Функція, яка змінює об'єкт на основі прискорення
+  function transformObject(accelerationX, accelerationY) {
+    // Ваш код для зміни об'єкту на основі значень прискорення
+    // Наприклад, встановлення стилів CSS об'єкта на основі прискорення
+    var object = document.getElementsByClassName('layers__container');
+    object.style.setProperty('--move-x-ac', (accelerationX * -0.005) + 'deg');
+    object.style.setProperty('--move-y-ac', (accelerationY * 0.005) + 'deg');
+  }
