@@ -38,7 +38,7 @@ body {
     min-height: 500px;
     transform-style: preserve-3d;
     transform: rotateX(var(--move-y)) rotateY(var(--move-x));
-    transform: translate3d(var(--move-x-ac), var(--move-y-ac), 0);
+    transform: rotateX(var(--move-y-ac)) rotateY(var(--move-x-ac));
     will-change: transform;
     transition: transform var(--transition);
 }
